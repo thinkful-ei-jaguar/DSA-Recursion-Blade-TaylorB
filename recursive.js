@@ -54,10 +54,6 @@ const stringSplitter = function(string, separator) {
 } 
 console.log(stringSplitter('16/45/2378', '/'))
 
-
-
-
-
 //Fibonacci 
 
 const fibo = function (number) {    
@@ -79,3 +75,45 @@ for (let i = 1; i <= fibNum; i++) {
 
 console.log(arr);
 
+//Factorial
+const factorialFinder = function(num) {
+    if (num <= 1) {
+        return 1
+    }
+
+    return num * factorialFinder(num - 1)
+}
+
+console.log(factorialFinder(5))
+
+//Maze
+let mySmallMaze = [
+    [' ', ' ', ' '],
+    [' ', '*', ' '],
+    [' ', ' ', 'e']
+];
+
+let maze = [
+    [' ', ' ', ' ', '*', ' ', ' ', ' '],
+    ['*', '*', ' ', '*', ' ', '*', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', '*', '*', '*', '*', '*', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', 'e']
+];
+
+const aMazeingTime = function (maze, indexRow, indexColumn, route) {
+   const route = ''
+   if(maze[indexRow][indexColumn] === 'e'){
+       return 'Yay we done!'//go back to this later
+   }
+   if(maze[indexRow][indexColumn] === '*'){
+        if(route[route.length -1] === 'D') {
+            route[route.length] = 'U'
+        }
+   }
+}
+
+//if maze[currentIndex + 1][currentIndex + 1] === ' '
+//currentIndex = currentIndex + 1 
+
+const obj = {Zuckerberg: {Schroepfer: }}
