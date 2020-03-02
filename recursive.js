@@ -7,3 +7,14 @@ const countingSheep = function(flock) {
 }
 
 countingSheep(3)
+
+const powerCalculator = function (base, exponent) {
+    if (exponent < 0) {
+        return console.log('exponent should be >= 0')
+    } else if (exponent === 0) {
+        return 1;
+    } else {
+        return (base * powerCalculator(base, (exponent - 1)))
+    }
+}
+console.log(powerCalculator(10, 3))
